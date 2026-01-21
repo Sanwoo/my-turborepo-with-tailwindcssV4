@@ -1,0 +1,27 @@
+{
+  "name": "nextjs-template",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf .turbo .next dist node_modules"
+  },
+  "dependencies": {
+    "@workspace/ui": "workspace:*",
+    "next": "catalog:",
+    "next-themes": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "babel-plugin-react-compiler": "catalog:",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*"
+  }
+}

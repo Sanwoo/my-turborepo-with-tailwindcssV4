@@ -1,0 +1,18 @@
+{
+  "name": "@workspace/eslint-config",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./next-js": "./next.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "catalog:",
+    "eslint-config-next": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-only-warn": "catalog:",
+    "eslint-plugin-better-tailwindcss": "catalog:",
+    "eslint-plugin-turbo": "catalog:",
+    "globals": "catalog:"
+  }
+}

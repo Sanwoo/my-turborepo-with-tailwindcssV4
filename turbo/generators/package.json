@@ -1,0 +1,12 @@
+{
+  "name": "@repo/generators",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "gen": "turbo gen --config ./config.ts"
+  },
+  "devDependencies": {
+    "@turbo/gen": "catalog:",
+    "@types/node": "catalog:"
+  }
+}

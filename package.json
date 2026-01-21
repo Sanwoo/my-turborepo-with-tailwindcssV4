@@ -1,0 +1,85 @@
+{
+  "name": "my-turborepo-with-tailwindcssv4",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "dev:nextjs-template": "turbo dev --filter=nextjs-template",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "clean": "turbo run clean",
+    "deep-clean": "turbo clean && turbo run clean",
+    "prepare": "husky install",
+    "devtools": "turbo devtools",
+    "gen:app": "turbo gen nextjs-app"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "eslint": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "turbo": "catalog:",
+    "next": "catalog:",
+    "typescript": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@tailwindcss/postcss": "catalog:",
+    "tailwindcss": "catalog:"
+  },
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.{css,scss,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "feat",
+          "fix",
+          "chore",
+          "docs",
+          "style",
+          "refactor",
+          "perf",
+          "test"
+        ]
+      ],
+      "scope-empty": [
+        0
+      ],
+      "subject-case": [
+        2,
+        "always",
+        "lower-case"
+      ],
+      "header-max-length": [
+        2,
+        "always",
+        100
+      ]
+    }
+  }
+}
