@@ -15,7 +15,6 @@
     "tailwind-merge": "catalog:"
   },
   "devDependencies": {
-    "@turbo/gen": "catalog:",
     "tw-animate-css": "catalog:",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*"
