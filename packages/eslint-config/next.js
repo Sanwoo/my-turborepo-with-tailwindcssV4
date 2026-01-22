@@ -57,6 +57,7 @@ export const nextJsConfig = [
     },
     rules: {
       'tailwindcss/classnames-order': 'off',
+      'tailwindcss/no-custom-classname': 'off',
     },
   },
 ]
