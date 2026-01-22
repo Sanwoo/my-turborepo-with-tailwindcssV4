@@ -152,7 +152,7 @@ export default nextJsConfig
 
 ### Tailwind CSS ESLint 支持
 
-项目已集成 `eslint-plugin-better-tailwindcss`，用于检查 Tailwind CSS 类名的正确性和最佳实践。
+项目已集成 `eslint-plugin-tailwindcss`，用于检查 Tailwind CSS 类名的正确性和最佳实践。
 
 - **配置位置**: `packages/eslint-config/next.js`
 - **功能**:
@@ -240,7 +240,7 @@ export default nextJsConfig
 
 ### Tailwind CSS ESLint 支持
 
-项目已集成 `eslint-plugin-better-tailwindcss`，用于检查 Tailwind CSS 类名的正确性和最佳实践。
+项目已集成 `eslint-plugin-tailwindcss`，用于检查 Tailwind CSS 类名的正确性和最佳实践。
 
 - **配置位置**: `packages/eslint-config/next.js`
 - **功能**:
