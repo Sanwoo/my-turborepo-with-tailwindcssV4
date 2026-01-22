@@ -2,7 +2,7 @@ import js from '@eslint/js'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import globals from 'globals'
 import onlyWarn from 'eslint-plugin-only-warn'
-import pluginTailwindcss from 'eslint-plugin-better-tailwindcss'
+import pluginTailwindcss from 'eslint-plugin-tailwindcss'
 import turboPlugin from 'eslint-plugin-turbo'
 import nextVitals from 'eslint-config-next/core-web-vitals'
 import nextTs from 'eslint-config-next/typescript'
@@ -47,17 +47,16 @@ export const nextJsConfig = [
       'react/prop-types': 'off',
     },
   },
+  ...pluginTailwindcss.configs['flat/recommended'],
   {
-    plugins: {
-      tailwindcss: pluginTailwindcss,
-    },
+    files: ['**/*.{ts,tsx,js,jsx}'],
     settings: {
       tailwindcss: {
-        cssFiles: ['**/*.css', '!**/node_modules/**', '!**/dist/**', '!**/build/**'],
+        callees: ['cn', 'clsx', 'twMerge'],
       },
     },
     rules: {
-      'tailwindcss/no-custom-classname': 'off',
+      'tailwindcss/classnames-order': 'off',
     },
   },
 ]

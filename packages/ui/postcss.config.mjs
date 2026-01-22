@@ -1,13 +1,7 @@
-import { nextJsConfig } from '@workspace/eslint-config/next-js'
-
-/** @type {import("eslint").Linter.Config[]} */
-const config = [
-  ...nextJsConfig,
-  {
-    rules: {
-      '@next/next/no-html-link-for-pages': 'off',
-    },
+const config = {
+  plugins: {
+    '@tailwindcss/postcss': {},
   },
-]
+}
 
 export default config

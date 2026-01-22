@@ -11,7 +11,7 @@
     "eslint-config-next": "catalog:",
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-only-warn": "catalog:",
-    "eslint-plugin-better-tailwindcss": "catalog:",
+    "eslint-plugin-tailwindcss": "catalog:",
     "eslint-plugin-turbo": "catalog:",
     "globals": "catalog:"
   }
