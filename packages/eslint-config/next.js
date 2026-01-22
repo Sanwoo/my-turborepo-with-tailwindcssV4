@@ -15,7 +15,6 @@ import nextTs from 'eslint-config-next/typescript'
  * */
 export const nextJsConfig = [
   js.configs.recommended,
-  eslintConfigPrettier,
   ...nextTs,
   {
     plugins: {
@@ -60,4 +59,5 @@ export const nextJsConfig = [
       'tailwindcss/no-custom-classname': 'off',
     },
   },
+  eslintConfigPrettier,
 ]
