@@ -165,7 +165,7 @@ export default nextJsConfig
 
 #### 依赖管理优化与 ESLint 配置修复
 
-- **变更时间**: 2024年12月（最新）
+- **变更时间**: 2024年12月
 - **变更内容**:
   - **依赖管理优化**:
     - 将共享的 devDependencies 移到根目录 `package.json`：
@@ -189,6 +189,12 @@ export default nextJsConfig
   - 通过 pnpm 的依赖解析机制，所有子包可以访问根目录的共享依赖
   - 修复 ESLint 配置问题，确保所有包都能正常进行 lint 检查
   - 提高 catalog 配置的可读性和维护性
+
+#### Next.js 与 eslint-config-next 升级至 16.1.6
+
+- **变更时间**: 2025年2月（最新）
+- **变更内容**:
+  - `next` 与 `eslint-config-next` 升级至 `^16.1.6`
 
 #### ESLint 配置统一化与依赖清理
 
@@ -463,10 +469,10 @@ pnpx add-skill vercel-labs/agent-skills
 ### 版本更新
 
 - **React**: 已更新到 `v19.2.3`(最新版本)
-- **Next.js**: 已更新到 `v16.1.4`(最新版本,支持 React Compiler)
+- **Next.js**: 已更新到 `v16.1.6`(最新版本,支持 React Compiler)
 - **Tailwind CSS**: 已升级到 `v4.x` (4.1.18)，采用 CSS-first 配置方式
 - **Turbo**: 已从 `v2.6.3` 升级到 `v2.7.4`(使用 `@turbo/codemod` 自动升级,无需 codemod 迁移)
-- **ESLint Config**: `eslint-config-next` 升级到 `v16.1.4`, `eslint-config-prettier` 升级到 `v10.1.8`
+- **ESLint Config**: `eslint-config-next` 升级到 `v16.1.6`, `eslint-config-prettier` 升级到 `v10.1.8`
 
 ### 添加新的依赖
 
@@ -1247,7 +1253,7 @@ const Component = () => {
 ### 兼容性
 
 - **React 版本**: 需要 React 19+ (项目使用 `^19.2.3`)
-- **Next.js 版本**: 需要 Next.js 16+ (项目使用 `^16.1.4`)
+- **Next.js 版本**: 需要 Next.js 16+ (项目使用 `^16.1.6`)
 - **TypeScript**: 完全支持 TypeScript
 
 ### 最佳实践
