@@ -192,9 +192,15 @@ export default nextJsConfig
 
 #### Next.js 与 eslint-config-next 升级至 16.1.6
 
-- **变更时间**: 2025年2月（最新）
+- **变更时间**: 2025年2月
 - **变更内容**:
   - `next` 与 `eslint-config-next` 升级至 `^16.1.6`
+
+#### nextjs-template 移除 next-themes 默认配置
+
+- **变更时间**: 2025年2月（最新）
+- **变更内容**:
+  - 从 nextjs-template 移除 next-themes 与 ThemeProvider 默认配置；移除 layout 中 `<html>` 的 `suppressHydrationWarning`，避免默认配置掩盖开发时的水合报警；需要主题切换的项目可自行添加 `next-themes`。
 
 #### ESLint 配置统一化与依赖清理
 
@@ -385,7 +391,7 @@ pnpx add-skill vercel-labs/agent-skills
 - **核心框架**: `next`、`react`、`react-dom`
 - **开发工具**: `eslint`、`typescript`、`turbo`、`prettier` 等
 - **类型定义**: `@types/node`、`@types/react`、`@types/react-dom`
-- **UI 组件库**: `@radix-ui/react-slot`、`next-themes`
+- **UI 组件库**: `@radix-ui/react-slot`
 - **样式工具**: `tailwindcss`、`@tailwindcss/postcss`、`tailwind-merge`
 - **构建工具**: `turbo`、`@turbo/gen`、`prettier`
 - **工具库**: `class-variance-authority`、`clsx`、`globals`

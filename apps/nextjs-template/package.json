@@ -15,7 +15,6 @@
   "dependencies": {
     "@workspace/ui": "workspace:*",
     "next": "catalog:",
-    "next-themes": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
