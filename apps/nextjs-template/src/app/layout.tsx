@@ -1,6 +1,12 @@
 import { Geist, Geist_Mono } from 'next/font/google'
 
+/**
+ * Import the UI package's global styles first, then import the app's global styles to override the variables of colors,
+ * because UI package's global styles are used in all apps and each app also has its own global styles.
+ */
 import '@workspace/ui/globals.css'
+import './globals.css'
+
 import { Providers } from '@/components/providers'
 
 const fontSans = Geist({
