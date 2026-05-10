@@ -5,19 +5,19 @@ packages:
 
 catalog:
   # 核心框架 (Core Framework)
-  react: ^19.2.3
-  'react-dom': ^19.2.3
-  next: ^16.1.6
+  react: ^19.2.6
+  'react-dom': ^19.2.6
+  next: ^16.2.6
 
   # 开发工具 (Development Tools)
   typescript: ^5.9.3
   eslint: ^9.39.1
   '@eslint/js': ^9.39.1
-  'eslint-config-next': ^16.1.6
+  'eslint-config-next': ^16.2.6
   'eslint-config-prettier': ^10.1.8
   'eslint-plugin-only-warn': ^1.1.0
   'eslint-plugin-tailwindcss': 4.0.0-beta.0
-  'eslint-plugin-turbo': ^2.5.5
+  'eslint-plugin-turbo': ^2.9.12
   'prettier-plugin-tailwindcss': ^0.7.2
   husky: ^9.1.7
   'lint-staged': ^16.2.7
@@ -39,8 +39,8 @@ catalog:
   'tailwind-merge': ^3.4.0
 
   # 构建工具 (Build Tools)
-  turbo: ^2.7.4
-  '@turbo/gen': ^2.5.5
+  turbo: ^2.9.12
+  '@turbo/gen': ^2.9.12
   prettier: ^3.7.4
 
   # 工具库 (Utility Libraries)
