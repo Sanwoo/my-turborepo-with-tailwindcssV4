@@ -75,7 +75,6 @@ import { Button } from '@workspace/ui/components/button'
      - 包含基础规则（ESLint 推荐、Prettier 兼容、TypeScript）
      - 包含 React 和 React Hooks 规则（通过 `eslint-config-next/core-web-vitals`）
      - 包含 Next.js 特定规则
-     - 包含 Tailwind CSS 支持
      - 包含 Turbo 和 only-warn 插件
 
 2. **根目录配置** (`eslint.config.js`):
@@ -100,7 +99,6 @@ import { Button } from '@workspace/ui/components/button'
 - **基础规则**: ESLint 推荐规则、Prettier 兼容、TypeScript 规则
 - **React 规则**: 通过 `eslint-config-next/core-web-vitals` 包含 React 和 React Hooks 规则
 - **Next.js 规则**: Next.js 特定的 ESLint 规则
-- **Tailwind CSS**: Tailwind CSS 类名检查和验证
 - **工具插件**: Turbo 插件（环境变量检查）、only-warn 插件（将错误转为警告）
 
 **配置示例**:
@@ -150,16 +148,9 @@ export default nextJsConfig
 - `react/react-in-jsx-scope: "off"` - 新 JSX 转换不需要 React 导入
 - `react/prop-types: "off"` - 使用 TypeScript 进行类型检查
 
-### Tailwind CSS ESLint 支持
+### Tailwind CSS 代码风格
 
-项目已集成 `eslint-plugin-tailwindcss`，用于检查 Tailwind CSS 类名的正确性和最佳实践。
-
-- **配置位置**: `packages/eslint-config/next.js`
-- **功能**:
-  - 检查 Tailwind CSS 类名是否存在
-  - 验证类名顺序和格式
-  - 检测未使用的自定义类名
-  - 提供 Tailwind CSS 最佳实践建议
+项目使用 Tailwind CSS v4 的 CSS-first 配置方式。Tailwind 类名排序由 `prettier-plugin-tailwindcss` 负责，避免在没有 JavaScript Tailwind 配置文件时引入不兼容的 ESLint Tailwind 规则。
 
 ### 变更历史
 
@@ -250,16 +241,9 @@ export default nextJsConfig
 - 移除了 `@next/eslint-plugin-next`、`eslint-plugin-react` 和 `eslint-plugin-react-hooks` 的单独依赖
 - 使用 `eslint-config-next` 统一管理 Next.js、React 和 React Hooks 的 ESLint 规则
 
-### Tailwind CSS ESLint 支持
+### Tailwind CSS 代码风格
 
-项目已集成 `eslint-plugin-tailwindcss`，用于检查 Tailwind CSS 类名的正确性和最佳实践。
-
-- **配置位置**: `packages/eslint-config/next.js`
-- **功能**:
-  - 检查 Tailwind CSS 类名是否存在
-  - 验证类名顺序和格式
-  - 检测未使用的自定义类名
-  - 提供 Tailwind CSS 最佳实践建议
+项目使用 Tailwind CSS v4 的 CSS-first 配置方式。Tailwind 类名排序由 `prettier-plugin-tailwindcss` 负责，避免在没有 JavaScript Tailwind 配置文件时引入不兼容的 ESLint Tailwind 规则。
 
 ## 代码格式化
 

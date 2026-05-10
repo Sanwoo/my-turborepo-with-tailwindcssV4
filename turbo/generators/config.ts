@@ -22,12 +22,15 @@ interface TurboPlop extends PlopTypes.NodePlopAPI {
 }
 
 export default function generator(plop: TurboPlop): void {
+  const getRootPath = () => plop.turbo?.paths?.root || process.cwd()
+  const getAppsDir = () => path.join(getRootPath(), 'apps')
+
   // 定义自定义复制动作,完全绕过 Handlebars 对源码的解析
   plop.setActionType('copy-template', (answers) => {
     const typedAnswers = answers as TurboAnswers
-    const rootPath = plop.turbo?.paths?.root || process.cwd()
+    const rootPath = getRootPath()
     const sourceDir = path.join(rootPath, 'apps/nextjs-template')
-    const appsDir = path.join(rootPath, 'apps')
+    const appsDir = getAppsDir()
     const destDir = path.join(appsDir, plop.renderString('{{dashCase name}}', answers))
 
     // 计算端口号: 3000 + 当前 apps 目录下的目录数量
@@ -40,8 +43,7 @@ export default function generator(plop: TurboPlop): void {
     typedAnswers.port = port
 
     if (fs.existsSync(destDir)) {
-      // 如果存在则清理(可选)
-      fs.rmSync(destDir, { recursive: true, force: true })
+      throw new Error(`应用 apps/${path.basename(destDir)} 已存在,请换一个名称或先手动处理该目录`)
     }
 
     fs.mkdirSync(destDir, { recursive: true })
@@ -70,6 +72,10 @@ export default function generator(plop: TurboPlop): void {
           if (!input) return '应用名称不能为空'
           if (!/^[a-z0-9-]+$/.test(input)) {
             return '应用名称只能包含小写字母、数字和连字符'
+          }
+          const appName = plop.renderString('{{dashCase name}}', { name: input })
+          if (fs.existsSync(path.join(getAppsDir(), appName))) {
+            return `应用 apps/${appName} 已存在,请换一个名称`
           }
           return true
         },
